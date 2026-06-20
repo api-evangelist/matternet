@@ -1,0 +1,93 @@
+aid: matternet
+name: Matternet
+review:
+  question: Does Matternet expose a documented public or partner developer API?
+  answer: false
+  date: '2026-06-20'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was created. Matternet does operate a real-time
+    device-to-cloud telemetry stream - M2 drones and Matternet Stations
+    transmit protobuf messages over an MQTT broker (HiveMQ) to the Matternet
+    cloud - which is the kind of event-driven surface AsyncAPI models. However,
+    this transport is entirely internal: no broker endpoint, topic schema,
+    payload definition, or credentials are published for third-party
+    subscribers. Modeling it would require fabricating channels and bindings,
+    which is out of scope. If Matternet ever publishes a partner telemetry
+    subscribe surface, an AsyncAPI document should be authored then.
+findings:
+  summary: |
+    Matternet does not publish a public or self-serve developer API, and no
+    partner API reference, base URL, endpoint catalog, authentication scheme,
+    or developer portal could be found as of the review date. Matternet's
+    public site (matternet.com) documents the integrated system - the
+    FAA type-certified M2 aircraft, the Matternet Station, and the proprietary
+    cloud Software Platform (Mission Control, Ground Operations, Simulation and
+    Training, Aircraft Control, Management App Suite, Onboard Software) - but
+    presents these as Matternet-operated products, not as developer-accessible
+    APIs. Third-party vendor case studies describe the internal architecture:
+    a consistent Hasura-powered GraphQL data layer over PostgreSQL (fed by a
+    Kafka stream normalizing protobuf device messages) serving Matternet's own
+    operator and client applications, with role-based access control and query
+    rate limiting; and HiveMQ as the MQTT broker carrying real-time protobuf
+    telemetry from drones and Stations. Both the GraphQL API and the MQTT
+    telemetry stream are explicitly internal/operator-facing, not public.
+    Matternet has also referenced a secure medical drone delivery portal for
+    hospitals, but no public LIS/EHR dispatch or integration API is documented.
+    Integrations are delivered through partner and operator engagements.
+  apiAvailability:
+    publicApi: false
+    partnerApi: undocumented
+    selfServe: false
+    developerPortal: false
+    note: >-
+      Access to platform capabilities is via commercial/partner engagement with
+      Matternet. No public credentials, API keys, or documentation are offered.
+  transports:
+    - protocol: GraphQL
+      scheme: https
+      documented: false
+      note: Internal Hasura-powered GraphQL data layer serving Matternet's own operator/client applications; not exposed publicly. Described in the Hasura customer case study.
+    - protocol: MQTT
+      scheme: mqtt
+      documented: false
+      note: Device-to-cloud protobuf telemetry from drones and Stations to the Matternet cloud via a HiveMQ broker; internal transport, no public subscribe surface.
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: Hasura Actions wrap REST/business logic internally; no public REST endpoints are documented for third parties.
+  endpointsConfirmedPublic: []
+sources:
+  - url: https://www.matternet.com/
+    type: Website
+    note: Company overview; describes autonomous drone networks and FAA Type Certification. No developer or API section.
+  - url: https://www.matternet.com/our-system-software-platform
+    type: Documentation
+    note: Describes the cloud Software Platform applications. No API integrations, developer access, or LIS/EHR integration documented.
+  - url: https://www.matternet.com/our-system-landing-station
+    type: Documentation
+    note: Matternet Station product page; integrated with the M2 drone and cloud platform. No public API.
+  - url: https://hasura.io/customers/matternet
+    type: CaseStudy
+    note: Matternet built an internal consistent GraphQL API on Hasura/PostgreSQL fed by a Kafka stream of protobuf device messages, with RBAC and rate limiting. Internal, not public-facing.
+  - url: https://www.hivemq.com/case-studies/matternet/
+    type: CaseStudy
+    note: Drones and landing stations transmit real-time MQTT/protobuf telemetry to a HiveMQ broker on the Matternet platform. Internal telemetry transport.
+  - url: https://hitconsultant.net/2020/03/10/matternet-secure-medical-drone-delivery-portal-hospitals/
+    type: Article
+    note: Matternet launched a secure medical drone delivery portal for hospitals; a portal/UI, not a documented public integration API.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public or partner API surface is documented, so apis.yml models product
+    surfaces (Cloud Software Platform, Logistics Integration, Station/Aircraft
+    Telemetry) rather than fabricated endpoints, and the OpenAPI placeholder
+    uses an empty paths object with an accurate description. Plans, rate limits,
+    and FinOps artifacts are marked reconciled:false with notes that no public
+    pricing, quotas, or billing API exist. No AsyncAPI was authored because the
+    real MQTT telemetry stream is internal with no published channels.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

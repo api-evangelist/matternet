@@ -1,0 +1,9 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Matternet Cloud Platform API",
+    "version": "0.0",
+    "description": "Placeholder Open Collection for Matternet. As of 2026-06-20, Matternet does not publish a public or self-serve developer API. The Matternet cloud Software Platform is served by an internal Hasura-powered GraphQL data layer, and drones and Stations stream protobuf telemetry to the cloud over an MQTT broker (HiveMQ); both are internal/operator-facing with no published endpoints, base URL, or credentials. No requests are fabricated. This collection is an intentionally empty structural placeholder to be populated if Matternet publishes partner or public API documentation."
+  },
+  "items": []
+}

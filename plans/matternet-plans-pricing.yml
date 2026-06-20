@@ -1,0 +1,56 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Matternet
+providerId: matternet
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Drone Delivery
+- Logistics
+- Healthcare
+- Autonomous
+- UAS
+- Plans
+description: >-
+  Matternet does not offer a self-serve, publicly priced API or platform.
+  Matternet sells and operates integrated drone-logistics networks (M2
+  aircraft, Matternet Station, and the cloud Software Platform) through
+  commercial and partner engagements for healthcare systems and logistics
+  organizations. Pricing is delivery- and contract-based and is negotiated
+  directly with Matternet sales; no public per-call API pricing or developer
+  tiers are published.
+notes: >-
+  No public pricing page exists for a Matternet developer API. The single
+  plan below is a placeholder for commercial/partner engagement and is not
+  reconciled against any published rate card. Contact Matternet for terms.
+sources:
+- https://www.matternet.com/
+- https://www.matternet.com/our-system-software-platform
+plans:
+- id: matternet-partner
+  name: Commercial / Partner Engagement
+  type: enterprise
+  description: >-
+    Contract-based deployment and operation of Matternet drone-logistics
+    networks for healthcare and logistics customers, including platform
+    access and any integration work. Negotiated directly with Matternet.
+  entries:
+  - label: Commercial Agreement
+    name: commercial_agreement
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: year
+    geo: global
+    unit: 1
+    price: contact sales
+    userMultiplied: false
+  elements:
+  - name: Drone Delivery Network Operations
+  - name: Cloud Software Platform Access
+  - name: Partner Integration
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

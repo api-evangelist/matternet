@@ -1,0 +1,99 @@
+aid: matternet
+url: https://raw.githubusercontent.com/api-evangelist/matternet/refs/heads/main/apis.yml
+name: Matternet
+kind: company
+description: Matternet designs, builds, and operates autonomous urban drone-logistics
+  networks for healthcare and on-demand delivery. The integrated system pairs the
+  FAA type-certified M2 aircraft with the Matternet Station and a proprietary cloud
+  Software Platform that routes, commands, and monitors flights. Telemetry streams
+  from drones and stations to the cloud over an MQTT broker (HiveMQ) as protobuf
+  messages, and a consistent internal Hasura-powered GraphQL data layer serves
+  Matternet's operator and client applications. As of this profile, Matternet does
+  not publish a public or self-serve developer API; integrations are delivered
+  through partner and operator engagements.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Drone Delivery
+- Logistics
+- Healthcare
+- Autonomous
+- UAS
+- Telemetry
+created: '2026-06-20'
+modified: '2026-06-20'
+specificationVersion: '0.19'
+apis:
+- aid: matternet:matternet-cloud-platform
+  name: Matternet Cloud Software Platform
+  tags:
+  - Cloud Platform
+  - Dispatch
+  - Routing
+  - GraphQL
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.matternet.com/our-system-software-platform
+  properties:
+  - url: https://www.matternet.com/our-system-software-platform
+    type: Documentation
+  - url: openapi/matternet-openapi.yml
+    type: OpenAPI
+  description: Matternet's proprietary cloud platform that receives customer delivery
+    requests, generates routes, and commands, controls, and monitors all operating
+    Matternet assets. A consistent internal Hasura-powered GraphQL data layer
+    serves Matternet's operator and client applications (Mission Control, Ground
+    Operations, Management App Suite). No public or self-serve developer API is
+    documented; access is partner/operator-only.
+- aid: matternet:matternet-logistics-integration
+  name: Matternet Logistics Integration
+  tags:
+  - Integration
+  - Healthcare
+  - Delivery Portal
+  - Chain of Custody
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.matternet.com/our-system
+  properties:
+  - url: https://www.matternet.com/our-system
+    type: Documentation
+  - url: openapi/matternet-openapi.yml
+    type: OpenAPI
+  description: Operator-facing logistics surface for requesting deliveries and
+    tracking payload chain-of-custody across hospital, laboratory, and pharmacy
+    workflows. Matternet has referenced a secure medical drone delivery portal for
+    hospitals, but no public integration API (e.g. LIS/EHR dispatch) is publicly
+    documented. Integration is delivered through partner engagements.
+- aid: matternet:matternet-station-telemetry
+  name: Matternet Station and Aircraft Telemetry
+  tags:
+  - Telemetry
+  - MQTT
+  - Station
+  - Aircraft
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://www.matternet.com/our-system-landing-station
+  properties:
+  - url: https://www.matternet.com/our-system-landing-station
+    type: Documentation
+  - url: https://www.matternet.com/our-system-aircraft
+    type: Documentation
+  description: During flights, M2 drones and Matternet Stations transmit real-time
+    protobuf telemetry to the Matternet cloud over an MQTT broker (HiveMQ). This is
+    an internal device-to-cloud telemetry transport, not a documented public
+    subscribe API; no broker endpoint, topic schema, or credentials are published
+    for third-party developers.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/matternet-inc
+- type: Website
+  url: https://www.matternet.com/
+- type: Documentation
+  url: https://www.matternet.com/our-system
+- type: Plans
+  url: plans/matternet-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/matternet-rate-limits.yml
+- type: FinOps
+  url: finops/matternet-finops.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

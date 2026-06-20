@@ -1,0 +1,13 @@
+{
+  "info": {
+    "_postman_id": "0b0d1f9a-2a4c-4f3e-9d1a-7c6e2a8b1f44",
+    "name": "Matternet Cloud Platform API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Placeholder Postman collection for Matternet. As of 2026-06-20, Matternet does not publish a public or self-serve developer API. The Matternet cloud Software Platform is served by an internal Hasura-powered GraphQL data layer, and drones and Stations stream protobuf telemetry to the cloud over an MQTT broker (HiveMQ); both are internal/operator-facing and have no published endpoints, base URL, or credentials. No requests are fabricated. This collection is an intentionally empty structural placeholder to be populated if Matternet publishes partner or public API documentation.\n\nWebsite: https://www.matternet.com/",
+      "type": "text/plain"
+    }
+  },
+  "item": [],
+  "variable": []
+}

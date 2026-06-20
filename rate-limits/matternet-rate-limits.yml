@@ -1,0 +1,55 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Matternet
+providerId: matternet
+created: '2026-06-20'
+modified: '2026-06-20'
+reconciled: false
+tags:
+- Drone Delivery
+- Logistics
+- Healthcare
+- Autonomous
+- UAS
+- Rate Limiting
+- Quotas
+description: >-
+  No public developer API rate limits are documented for Matternet, because
+  Matternet does not expose a public or self-serve API. Matternet's internal
+  Hasura-powered GraphQL layer is described as implementing role-based access
+  control and query rate limiting / query-depth restrictions to protect the
+  platform, but these are internal operational controls applied to Matternet's
+  own client applications, not published quotas for third-party developers.
+  Device telemetry (MQTT/protobuf to HiveMQ) is a Matternet-operated transport
+  with no published throttling policy for external consumers.
+notes: >-
+  Values are not reconciled; no public rate-limit documentation exists. The
+  entries below describe internal controls referenced in vendor case studies
+  rather than published external limits.
+sources:
+- https://hasura.io/customers/matternet
+- https://www.hivemq.com/case-studies/matternet/
+responseCodes: {}
+limits:
+- name: GraphQL Query Rate Limiting
+  scope: internal
+  metric: requests
+  limit: not published
+  notes: Internal Hasura rate limiting and query-depth restrictions referenced in vendor case study; not an external developer quota.
+- name: GraphQL Role-Based Access Control
+  scope: internal
+  metric: authorization
+  limit: not published
+  notes: Row/column-level RBAC on the internal GraphQL data layer for Matternet's own client applications.
+- name: Telemetry Transport (MQTT)
+  scope: internal
+  metric: messages
+  limit: not published
+  notes: Device-to-cloud protobuf telemetry over an MQTT broker (HiveMQ); no external subscribe quota documented.
+policies:
+- name: No Public API
+  description: Matternet does not publish a public or self-serve developer API; no external rate limits are documented as of this profile.
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
