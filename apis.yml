@@ -82,6 +82,8 @@ apis:
     subscribe API; no broker endpoint, topic schema, or credentials are published
     for third-party developers.
 common:
+- type: DomainSecurity
+  url: security/matternet-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/matternet-inc
 - type: Website
@@ -94,6 +96,8 @@ common:
   url: rate-limits/matternet-rate-limits.yml
 - type: FinOps
   url: finops/matternet-finops.yml
+- type: Blog
+  url: https://www.matternet.com/newsroom
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
