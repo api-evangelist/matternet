@@ -1,0 +1,14 @@
+{
+  "repo": "matternet",
+  "feeds": [
+    {
+      "source": "https://www.matternet.com/newsroom",
+      "feed_url": "https://www.matternet.com/newsroom",
+      "title": "Matternet Newsroom",
+      "saved": 0,
+      "error": "parse_failed"
+    }
+  ],
+  "fetched": "2026-07-11T11:43:46Z",
+  "post_count": 11
+}
