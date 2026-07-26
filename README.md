@@ -60,11 +60,6 @@ Operator-facing logistics surface for requesting deliveries and tracking payload
 - [Postman Collection](collections/matternet.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
 - [Open Collection](collections/matternet.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
 
-### Matternet Station and Aircraft Telemetry
-
-During flights, M2 drones and Matternet Stations transmit real-time protobuf telemetry to the Matternet cloud over an MQTT broker (HiveMQ). This is an internal device-to-cloud telemetry transport, not a documented public subscribe API; no broker endpoint, topic schema, or credentials are published for third-party developers.
-
-- **Human URL:** [https://www.matternet.com/our-system-landing-station](https://www.matternet.com/our-system-landing-station)
 
 #### Tags
 
