@@ -1,0 +1,23 @@
+openapi: 3.0.1
+info:
+  title: Matternet Cloud Platform API
+  description: >-
+    Placeholder OpenAPI description for the Matternet Cloud Software Platform.
+    As of this profile (2026-06-20), Matternet does not publish a public or
+    self-serve developer API. The platform exposes a consistent internal
+    Hasura-powered GraphQL data layer that serves Matternet's own operator and
+    client applications (Mission Control, Ground Operations, Management App
+    Suite), and drones and Stations stream protobuf telemetry to the cloud over
+    an MQTT broker (HiveMQ). None of these surfaces have published HTTP REST
+    endpoints, schemas, base URLs, or authentication available to third-party
+    developers. No endpoints are fabricated here; `paths` is intentionally
+    empty. This document is a structural placeholder to be reconciled if and
+    when Matternet publishes partner or public API documentation.
+  termsOfService: https://www.matternet.com/
+  contact:
+    name: Matternet
+    url: https://www.matternet.com/
+  version: '0.0'
+servers: []
+paths: {}
+components: {}

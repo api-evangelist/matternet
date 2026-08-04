@@ -1,0 +1,14 @@
+{
+  "provider": "matternet",
+  "sources": [
+    "matternet-openapi.yml"
+  ],
+  "outputs": [],
+  "archived": [
+    "archived matternet-openapi.yml"
+  ],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
