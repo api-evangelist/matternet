@@ -39,7 +39,7 @@ apis:
     properties:
       - url: https://www.matternet.com/our-system-software-platform
         type: Documentation
-      - url: openapi/matternet-openapi.yml
+      - url: openapi/_original/matternet-openapi.yml
         type: OpenAPI
     description: Matternet's proprietary cloud platform that receives customer delivery requests, generates routes, and commands, controls, and monitors all operating Matternet assets. A consistent internal Hasura-powered GraphQL data layer serves Matternet's operator and client applications (Mission Control, Ground Operations, Management App Suite). No public or self-serve developer API is documented; access is partner/operator-only.
   - aid: matternet:matternet-logistics-integration
@@ -54,7 +54,7 @@ apis:
     properties:
       - url: https://www.matternet.com/our-system
         type: Documentation
-      - url: openapi/matternet-openapi.yml
+      - url: openapi/_original/matternet-openapi.yml
         type: OpenAPI
     description: Operator-facing logistics surface for requesting deliveries and tracking payload chain-of-custody across hospital, laboratory, and pharmacy workflows. Matternet has referenced a secure medical drone delivery portal for hospitals, but no public integration API (e.g. LIS/EHR dispatch) is publicly documented. Integration is delivered through partner engagements.
 common:
