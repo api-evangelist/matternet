@@ -3,6 +3,17 @@ url: https://raw.githubusercontent.com/api-evangelist/matternet/refs/heads/main/
 name: Matternet
 kind: company
 description: Matternet designs, builds, and operates autonomous urban drone-logistics networks for healthcare and on-demand delivery. The integrated system pairs the FAA type-certified M2 aircraft with the Matternet Station and a proprietary cloud Software Platform that routes, commands, and monitors flights. Telemetry streams from drones and stations to the cloud over an MQTT broker (HiveMQ) as protobuf messages, and a consistent internal Hasura-powered GraphQL data layer serves Matternet's operator and client applications. As of this profile, Matternet does not publish a public or self-serve developer API; integrations are delivered through partner and operator engagements.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: unknown
