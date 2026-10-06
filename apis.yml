@@ -35,7 +35,7 @@ tags:
   - UAS
   - Telemetry
 created: '2026-06-20'
-modified: '2026-07-25'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
   - aid: matternet:matternet-cloud-platform
@@ -69,6 +69,8 @@ apis:
         type: OpenAPI
     description: Operator-facing logistics surface for requesting deliveries and tracking payload chain-of-custody across hospital, laboratory, and pharmacy workflows. Matternet has referenced a secure medical drone delivery portal for hospitals, but no public integration API (e.g. LIS/EHR dispatch) is publicly documented. Integration is delivered through partner engagements.
 common:
+  - url: https://www.matternet.com/newsroom?format=rss
+    type: BlogRSS
   - type: DomainSecurity
     url: security/matternet-domain-security.yml
   - type: LinkedIn
