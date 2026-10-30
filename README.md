@@ -1,4 +1,4 @@
-# Matternet (matternet)
+# Matternet
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,87 +66,108 @@
 
 Matternet designs, builds, and operates autonomous urban drone-logistics networks for healthcare and on-demand delivery. The integrated system pairs the FAA type-certified M2 aircraft with the Matternet Station and a proprietary cloud Software Platform that routes, commands, and monitors flights. Telemetry streams from drones and stations to the cloud over an MQTT broker (HiveMQ) as protobuf messages, and a consistent internal Hasura-powered GraphQL data layer serves Matternet's operator and client applications. As of this profile, Matternet does not publish a public or self-serve developer API; integrations are delivered through partner and operator engagements.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/matternet/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/matternet/refs/heads/main/apis.yml)
+**Areas:** Drone Delivery · Logistics · Healthcare · Autonomous · UAS · Telemetry
 
-## Tags
+## Matternet on APIs.io
 
-- Drone Delivery
-- Logistics
-- Healthcare
-- Autonomous
-- UAS
-- Telemetry
+Everything profiled for Matternet is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/matternet/](https://apis.io/providers/matternet/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (2)
 
-- **Created:** 2026-06-20
-- **Modified:** 2026-06-20
+- [Matternet Cloud Software Platform](https://apis.io/apis/matternet/matternet-cloud-platform/) — Matternet's proprietary cloud platform that receives customer delivery requests, generates routes, and commands, controls, and monitors all operating…
+- [Matternet Logistics Integration](https://apis.io/apis/matternet/matternet-logistics-integration/) — Operator-facing logistics surface for requesting deliveries and tracking payload chain-of-custody across hospital, laboratory, and pharmacy workflows.…
 
-## APIs
+### Published properties
 
-### Matternet Cloud Software Platform
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-Matternet's proprietary cloud platform that receives customer delivery requests, generates routes, and commands, controls, and monitors all operating Matternet assets. A consistent internal Hasura-powered GraphQL data layer serves Matternet's operator and client applications (Mission Control, Ground Operations, Management App Suite). No public or self-serve developer API is documented; access is partner/operator-only.
+#### Collections (1)
 
-- **Human URL:** [https://www.matternet.com/our-system-software-platform](https://www.matternet.com/our-system-software-platform)
+Postman and Open Collection request collections.
 
-#### Tags
+- [Matternet Cloud Platform API](https://apis.io/collections/matternet/open-matternet/)
 
-- Cloud Platform
-- Dispatch
-- Routing
-- GraphQL
+#### Security (1)
 
-#### Properties
+Authentication, trust centre, and vulnerability disclosure.
 
-- [Documentation](https://www.matternet.com/our-system-software-platform)
-- [OpenAPI](openapi/matternet-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/matternet.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/matternet.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Matternet Domain Security](https://apis.io/security/matternet/matternet-domain-security/)
 
-### Matternet Logistics Integration
+#### Plans and pricing (1)
 
-Operator-facing logistics surface for requesting deliveries and tracking payload chain-of-custody across hospital, laboratory, and pharmacy workflows. Matternet has referenced a secure medical drone delivery portal for hospitals, but no public integration API (e.g. LIS/EHR dispatch) is publicly documented. Integration is delivered through partner engagements.
+Published plans, tiers and prices.
 
-- **Human URL:** [https://www.matternet.com/our-system](https://www.matternet.com/our-system)
+- [Matternet Plans Pricing](https://apis.io/plans/matternet/matternet-plans-pricing/)
 
-#### Tags
+#### Rate limits (1)
 
-- Integration
-- Healthcare
-- Delivery Portal
-- Chain of Custody
+Published request limits.
 
-#### Properties
+- [Matternet Rate Limits](https://apis.io/rate-limits/matternet/matternet-rate-limits/)
 
-- [Documentation](https://www.matternet.com/our-system)
-- [OpenAPI](openapi/matternet-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/matternet.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/matternet.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+#### FinOps (1)
 
+What the API costs to run, by operation.
 
-#### Tags
+- [Matternet Finops](https://apis.io/finops/matternet/matternet-finops/)
 
-- Telemetry
-- MQTT
-- Station
-- Aircraft
+## Where to find this API
 
-#### Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- [Documentation](https://www.matternet.com/our-system-landing-station)
-- [Documentation](https://www.matternet.com/our-system-aircraft)
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/matternet-inc)
 - [Website](https://www.matternet.com/)
 - [Documentation](https://www.matternet.com/our-system)
-- [Plans](plans/matternet-plans-pricing.yml)
-- [Rate Limits](rate-limits/matternet-rate-limits.yml)
-- [Fin Ops](finops/matternet-finops.yml)
+- [Blog](https://www.matternet.com/newsroom)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 14.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 23.3 |
+| Contract governance | 0.0 |
+| Operational transparency | 7.9 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 5.3 |
+
+**Agent readiness 13.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 4.7** — Health
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/matternet/](https://apis.io/providers/matternet/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Matternet: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/matternet/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
